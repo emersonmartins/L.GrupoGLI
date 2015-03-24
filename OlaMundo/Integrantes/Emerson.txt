@@ -1,4 +1,4 @@
 Nome: Emerson Martins de Oliveira;
 Matrícula: 15114290134;
-Pontos Forte: Bom conhecimento de desenvolvimento web, HTML5, CCS3, PHP, facil de entendimento e apto a obter novos conhecimentos;
+Pontos Forte: Criativo, responsável, organizado, bom conhecimento em HTML5, CSS3, PHP;
 Pontos Fracos: Pouco conhecimento de JAVA;
