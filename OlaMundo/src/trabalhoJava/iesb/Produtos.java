@@ -1,6 +1,11 @@
 package trabalhoJava.iesb;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+
+import javax.swing.JOptionPane;
+
 
 public class Produtos {
 	private int id;
@@ -12,8 +17,16 @@ public class Produtos {
 	private Date dataDeFabricacao;
 	private Date validade;
 	private String categoria;
-	private int unidades;
-	private double quantidade;
+	private int quantidade;
+	private double quantidadeMilitros;
+	List<Produtos> adicionaProduto = new ArrayList<Produtos>(); 
+	
+	public void addproduto(){
+		Produtos novoProduto = new Produtos();
+		adicionaProduto.add(novoProduto);
+		JOptionPane.showMessageDialog(null, "Produto cadastrado com sucesso."," Loja Rinode", JOptionPane.INFORMATION_MESSAGE);
+	}
+	
 	public int getId() {
 		return id;
 	}
@@ -68,16 +81,10 @@ public class Produtos {
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
-	public int getUnidades() {
-		return unidades;
-	}
-	public void setUnidades(int unidades) {
-		this.unidades = unidades;
-	}
 	public double getQuantidade() {
 		return quantidade;
 	}
-	public void setQuantidade(double quantidade) {
+	public void setQuantidade(int quantidade) {
 		this.quantidade = quantidade;
 	}
 	
