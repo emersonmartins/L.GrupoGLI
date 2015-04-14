@@ -49,6 +49,7 @@
           	value="${validade_produto.time}" 
           	pattern="dd/MM/yyyy"/> 
      </td>-->
+     <td><a href="mostraProduto?id=${produto.id}">Alterar</a></td>
      <td><a href="removeProduto?id=${produto.id}">Remover</a></td>
     </tr>
   </c:forEach>

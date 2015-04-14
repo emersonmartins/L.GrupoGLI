@@ -23,7 +23,7 @@ public class JdbcProdutosDao {
 	}
 
 	public void adiciona(br.com.iesb.produto.modelo.Produto produto) {
-		String sql = "insert into produtos (nome_produto, marca_produto, genero_produto, valorDeCusto_produto, valorDeVenda_produto, categoria_produto, quantidade_produto, quantidaDeMililitros_produto, finalizado) values (?,?,?,?,?,?,?,?,?)";
+		String sql = "insert into produtos (nome_produto, marca_produto, genero_produto, valorDeCusto_produto, valorDeVenda_produto, categoria_produto, quantidade_produto, quantidaDeMililitros_produto, incluido) values (?,?,?,?,?,?,?,?,?)";
 		PreparedStatement stmt;
 		try {
 			stmt = connection.prepareStatement(sql);
@@ -35,7 +35,7 @@ public class JdbcProdutosDao {
 			stmt.setString(6, produto.getCategoria_produto());
 			stmt.setInt(7, produto.getQuantidade_produto());
 			stmt.setDouble(8, produto.getQuantidaDeMililitros_produto());			
-			stmt.setBoolean(9, produto.isFinalizado());
+			stmt.setBoolean(9, produto.isIncluido());
 			stmt.execute();
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
@@ -133,7 +133,7 @@ public class JdbcProdutosDao {
 			throw new IllegalStateException("Id do produto não deve ser nulo.");
 		}
 
-		String sql = "update produtos set finalizado = ?, dataInclusao = ? where id = ?";
+		String sql = "update produtos set incluido = ?, dataInclusao = ? where id = ?";
 		PreparedStatement stmt;
 		try {
 			stmt = connection.prepareStatement(sql);
@@ -159,7 +159,7 @@ public class JdbcProdutosDao {
 		produto.setCategoria_produto(rs.getString("categoria_produto"));
 		produto.setQuantidade_produto(rs.getInt("Quantidade_produto"));
 		produto.setQuantidaDeMililitros_produto(rs.getDouble("quantidadeMililitros_produto"));
-		produto.setFinalizado(rs.getBoolean("finalizado"));
+		produto.setFinalizado(rs.getBoolean("incluido"));
 
 		// popula a data de inclusao do produto, fazendo a conversao
 		Date data = rs.getDate("dataInclusao_produto");

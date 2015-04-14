@@ -32,16 +32,30 @@ public class ProdutosController {
 	
 	@RequestMapping("listaProdutos")
 	public String lista(Model model) {
-	  JdbcProdutosDao dao = new JdbcProdutosDao();
-	  model.addAttribute("produtos", dao.lista());
-	  return "lista";
+		JdbcProdutosDao dao = new JdbcProdutosDao();
+	  	model.addAttribute("produtos", dao.lista());
+	  	return "lista";
 	}
 	
 	@RequestMapping("removeProduto")
 	public String remove(Produto produto) {
-	  JdbcProdutosDao dao = new JdbcProdutosDao();
-	  dao.remove(produto);
-	  return "redirect:listaProdutos";
+		JdbcProdutosDao dao = new JdbcProdutosDao();
+	  	dao.remove(produto);
+	  	return "redirect:listaProdutos";
+	}
+	
+	@RequestMapping("mostraProduto")
+	public String mostra(Long id, Model model) {
+		JdbcProdutosDao dao = new JdbcProdutosDao();
+		model.addAttribute("produto", dao.buscaPorId(id));
+		return "mostra";
+	}
+	
+	@RequestMapping("alteraProduto")
+	public String altera(Produto produto) {
+		JdbcProdutosDao dao = new JdbcProdutosDao();
+		dao.altera(produto);
+		return "redirect:listaProdutos";
 	}
 	
 }

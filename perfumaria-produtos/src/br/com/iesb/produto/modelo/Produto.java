@@ -5,9 +5,12 @@ import java.util.Calendar;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class Produto {
 	
 	private long id;
+	@DateTimeFormat(pattern="dd/MM/yyyy")
 	private Calendar dataInclusao_produto;
 	@Size(min=4)
 	@NotNull (message="{produto.nome.vazio}")
@@ -21,7 +24,7 @@ public class Produto {
 	private String categoria_produto;
 	private int quantidade_produto;
 	private double quantidaDeMililitros_produto;
-	private boolean finalizado;
+	private boolean incluido;
 	
 	public long getId() {
 		return id;
@@ -89,11 +92,11 @@ public class Produto {
 	public void setQuantidaDeMililitros_produto(double quantidaDeMililitros_produto) {
 		this.quantidaDeMililitros_produto = quantidaDeMililitros_produto;
 	}
-	public boolean isFinalizado() {
-		return finalizado;
+	public boolean isIncluido() {
+		return incluido;
 	}
-	public void setFinalizado(boolean finalizado) {
-		this.finalizado = finalizado;
+	public void setFinalizado(boolean incluido) {
+		this.incluido = incluido;
 	}
 	public String getNome_produto() {
 		return nome_produto;
