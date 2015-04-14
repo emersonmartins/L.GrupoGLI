@@ -10,6 +10,7 @@
 <body>
 <h3>Adicionar Produtos</h3>
 <form:errors path="nome_produto"/>
+<form:errors path="nome_produto" cssStyle="color:red"/>
 <form action="adicionaProduto" method="post">
 	<table>
 		<tr>
@@ -19,8 +20,7 @@
 		</tr>
 		<tr>
 			<td>
-				<input type="text" requered="requered" name="nome_produto"></input>	
-				<form:errors path="nome_produto" />							
+				<input type="text" name="nome_produto"></input>											
 			</td>			
 		</tr>
 		<tr>
@@ -43,7 +43,7 @@
 				<input type="text" name="genero_produto"></input>
 			</td>
 		</tr>
-		<tr>
+		<!--<tr>
 			<td>
 				Valor de Custo:
 			</td>
@@ -92,7 +92,7 @@
 			<td>
 				<input type="text" name="quantidade_produto"></input>
 			</td>
-		</tr>
+		</tr> -->
 		<tr>
 			<td>
 				<input type="submit" value="Incluir">

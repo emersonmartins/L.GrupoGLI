@@ -9,8 +9,8 @@ public class Produto {
 	
 	private long id;
 	private Calendar dataInclusao_produto;
-	@Size(min=4, message="{produto.nome.pequeno}")
-	@NotNull(message="{produto.nome.vazio}")
+	@Size(min=4)
+	@NotNull (message="{produto.nome.vazio}")
 	private String nome_produto;
 	private String marca_produto;
 	private String genero_produto;

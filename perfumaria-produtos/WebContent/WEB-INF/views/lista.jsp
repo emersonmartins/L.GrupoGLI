@@ -10,11 +10,11 @@
 </head>
 <body>
 	<a href="novoProduto">Adicionar novo produto</a> 
-
+	
   <br /> <br />        
 
   <table>
-  <tr>
+  	<tr>
     <th>Id</th>
     <th>Nome</th>
     <th>Marca</th>
@@ -47,8 +47,9 @@
           	pattern="dd/MM/yyyy"/>
 		<fmt:formatDate 
           	value="${validade_produto.time}" 
-          	pattern="dd/MM/yyyy"/>--> 
-     </td>
+          	pattern="dd/MM/yyyy"/> 
+     </td>-->
+     <td><a href="removeProduto?id=${produto.id}">Remover</a></td>
     </tr>
   </c:forEach>
   </table>
