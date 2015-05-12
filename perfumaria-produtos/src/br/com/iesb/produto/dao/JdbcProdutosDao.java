@@ -59,21 +59,21 @@ public class JdbcProdutosDao {
 	}
 
 	public void altera(Produto produto) {
-		String sql = "update produtos set nome = ?, marca = ?, genero = ? where id = ?";
+		String sql = "update produtos set nome_produto = ?, marca_produto = ?, genero_produto = ? where id = ?";
 		PreparedStatement stmt;
 		try {
 			stmt = connection.prepareStatement(sql);
 			stmt.setString(1, produto.getNome_produto());
 			stmt.setString(2, produto.getMarca_produto());
 			stmt.setString(3, produto.getGenero_produto());
-			stmt.setDouble(4, produto.getValorDeCusto_produto());
+			/*stmt.setDouble(4, produto.getValorDeCusto_produto());
 			stmt.setDouble(5, produto.getValorDeVenda_produto());
 			stmt.setString(6, produto.getCategoria_produto());
 			stmt.setInt(7, produto.getQuantidade_produto());
 			stmt.setDouble(8, produto.getQuantidaDeMililitros_produto());
 			stmt.setDate(9, produto.getDataInclusao_produto() != null ? new Date(
-					produto.getDataInclusao_produto().getTimeInMillis()) : null);
-			stmt.setLong(10, produto.getId());
+					produto.getDataInclusao_produto().getTimeInMillis()) : null);*/
+			stmt.setLong(4, produto.getId());
 			stmt.execute();
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
@@ -123,24 +123,6 @@ public class JdbcProdutosDao {
 			stmt.close();
 
 			return null;
-		} catch (SQLException e) {
-			throw new RuntimeException(e);
-		}
-	}
-
-	public void finaliza(Long id) {
-		if (id == null) {
-			throw new IllegalStateException("Id do produto não deve ser nulo.");
-		}
-
-		String sql = "update produtos set incluido = ?, dataInclusao = ? where id = ?";
-		PreparedStatement stmt;
-		try {
-			stmt = connection.prepareStatement(sql);
-			stmt.setBoolean(1, true);
-			stmt.setDate(2, new Date(Calendar.getInstance().getTimeInMillis()));
-			stmt.setLong(3, id);
-			stmt.execute();
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
