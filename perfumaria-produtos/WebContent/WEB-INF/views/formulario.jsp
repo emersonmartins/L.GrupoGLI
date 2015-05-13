@@ -30,7 +30,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">FlorensceSyten</a>
+                <a class="navbar-brand" href="index.jsp">FlorensceSyten</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -67,7 +67,7 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Painel</a>
+                            <a href="index.jsp"><i class="fa fa-dashboard fa-fw"></i> Painel</a>
                         </li>
                         <li>
                             <a href="#" class="active"><i class="fa fa-edit fa-fw"></i> Cadastro de Produtos</a>
@@ -156,16 +156,5 @@
     <script src="js/js/bootstrap.min.js"></script>
     <script src="js/metisMenu.min.js"></script>
     <script src="js/sb-admin-2.js"></script>
-		<!--<tr>
-		<tr>
-			<td>
-				Quantidade de Mililitros:
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<input type="text" name="quantidade_produto"></input>
-			</td>
-		</tr> -->
 </body>
 </html> 
