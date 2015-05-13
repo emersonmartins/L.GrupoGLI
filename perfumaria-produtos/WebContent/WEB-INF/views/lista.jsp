@@ -7,11 +7,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="css/estilos.css" />
 </head>
 <body>
 	<a href="novoProduto">Adicionar novo produto</a> 
 		
-  <br /> <br />        
+  <br /> <br />  
+  Busca:<br/>
+		<input type="search"/>    
+		<input type="image" src="img/busca.png" class="lupa" />  
 
   <table>
   	<tr>

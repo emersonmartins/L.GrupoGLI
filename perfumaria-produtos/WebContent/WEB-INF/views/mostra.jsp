@@ -12,7 +12,7 @@
 	<h3>Alterar produto - ${produto.id}</h3>
 	
 	<form action="alteraProduto" method="post">
-
+	
     	<input type="hidden" name="id" value="${produto.id}" />
   
     		Nome:<br />
