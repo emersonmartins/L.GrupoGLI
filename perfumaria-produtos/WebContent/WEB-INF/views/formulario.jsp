@@ -10,13 +10,17 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="css/metisMenu.min.css" />
 <link rel="stylesheet" type="text/css" href="css/sb-admin-2.css" />
-<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="css/font-awesome-min.css" />
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="js/bootstrap-min.js"></script>
+    <script src="js/metisMenu-min.js"></script>
+    <script src="js/sb-admin-2.js"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -30,7 +34,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.jsp">FlorensceSyten</a>
+                <a class="navbar-brand" href="home">FlorensceSystem</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -44,7 +48,7 @@
                         <li><a href="#"><i class="fa fa-user fa-fw"></i> Perfil</a></li>
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Definições</a></li>
                         <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Sair</a></li>
+                        <li><a href="login"><i class="fa fa-sign-out fa-fw"></i> Sair</a></li>
                     </ul>
                     <!-- /.dropdown-user -->
                 </li>
@@ -67,7 +71,7 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="index.jsp"><i class="fa fa-dashboard fa-fw"></i> Painel</a>
+                            <a href="home"><i class="fa fa-dashboard fa-fw"></i> Painel</a>
                         </li>
                         <li>
                             <a href="#" class="active"><i class="fa fa-edit fa-fw"></i> Cadastro de Produtos</a>
@@ -110,6 +114,7 @@
                                                 <option value=""> </option>
                                                 <option value="masculino">Masculino</option>
                                                 <option value="feminino">Feminino</option>
+                                                <option value="feminino">Unissex</option>
                                             </select>
                                         </div>
                                         <div class="form-group">
@@ -151,10 +156,6 @@
             </div><!-- /.row -->
         </div><!-- /#page-wrapper -->
 
-    </div>s<!-- /#wrapper -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/js/bootstrap.min.js"></script>
-    <script src="js/metisMenu.min.js"></script>
-    <script src="js/sb-admin-2.js"></script>
+    </div><!-- /#wrapper -->
 </body>
 </html> 

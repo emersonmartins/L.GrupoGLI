@@ -58,4 +58,14 @@ public class ProdutosController {
 		return "redirect:listaProdutos";
 	}
 	
+	@RequestMapping ("home")
+	public String paginaInicial() {
+		return "index";
+	}
+	
+	@RequestMapping ("login")
+	public String altenticar(){
+		return "login";
+	}
+	
 }
