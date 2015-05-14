@@ -76,6 +76,9 @@
                         <li>
                             <a href="#" class="active"><i class="fa fa-edit fa-fw"></i> Cadastro de Produtos</a>
                         </li>
+                        <li>
+                            <a href="listaProdutos"><i class="fa fa-edit fa-fw"></i> Lista de Produtos</a>
+                        </li>
                     </ul>
                 </div><!-- /.sidebar-collapse -->
             </div><!-- /.navbar-static-side -->
