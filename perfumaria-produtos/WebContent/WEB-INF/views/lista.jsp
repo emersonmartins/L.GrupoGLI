@@ -35,7 +35,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="home">FlorensceSystem</a>
+                <a class="navbar-brand" href="home">FlorenceSystem</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -109,6 +109,7 @@
                                             <th style="text-align: center!important;">NOME</th>
                                             <th style="text-align: center!important;">MARCA</th>
                                             <th style="text-align: center!important;">GÊNERO</th>
+                                            <th style="text-alibn: center!important;">TAMANHO</th>
                                             <th style="text-align: center!important;">EDITAR</th>
                                             <th style="text-align: center!important;">EXCLUIR</th>
                                         </tr>
@@ -120,6 +121,7 @@
 									      	<td>${produto.nome_produto}</td>
 									      	<td>${produto.marca_produto}</td>
 									      	<td>${produto.genero_produto}</td>
+									      	<td>${produto.quantidaDeMililitros_produto}</td>
 									      	<td align="center" class="center"><a class="btn btn-primary" href="mostraProduto?id=${produto.id}"><i class="fa fa-edit"></i> Alterar</a></td>
      									    <td align="center" class="center"><a class="btn btn-default" href="removeProduto?id=${produto.id}"><i class="fa fa-trash"></i> Remover</a></td>
                                         </tr>
@@ -133,7 +135,7 @@
                 </div><!-- /.col-lg-12 -->
             </div>
  </div>  
-	<a href="novoProduto">Adicionar novo produto</a> 
+	<!-- <a href="novoProduto">Adicionar novo produto</a> 
 		
   <br /> <br />  
   Busca:<br/>
@@ -152,7 +154,7 @@
     <th>Validade</th>
     <th>Categoria</th>
     <th>Quantida</th>
-    <th>Quantidade de Mililitros</th>-->
+    <th>Quantidade de Mililitros</th>
     
   </tr>
 <c:forEach items="${produtos}" var="produto">
@@ -175,11 +177,12 @@
 		<fmt:formatDate 
           	value="${validade_produto.time}" 
           	pattern="dd/MM/yyyy"/> 
-     </td>-->
+     </td>
      <td><a href="mostraProduto?id=${produto.id}">Alterar</a></td>
      <td><a href="removeProduto?id=${produto.id}">Remover</a></td>
     </tr>
   </c:forEach>
-  </table>
+  </table> -->
+</div>
 </body>
 </html>

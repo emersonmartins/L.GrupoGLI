@@ -34,7 +34,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="home">FlorensceSystem</a>
+                <a class="navbar-brand" href="home">FlorenceSystem</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -126,10 +126,10 @@
                                         </div>
                                         <button type="submit" class="btn btn-default" value="Incluir">Incluir</button>
                                         <button type="reset" class="btn btn-default">Resetar</button>
-                                    </form>
+                                    
                                 </div>
                                 <div class="col-lg-6">
-                                    <form role="form">
+                                    
                                     	<label>Valor de Venda:</label>
                                     	<div class="form-group input-group">
                                             <span class="input-group-addon">R$</span>
@@ -145,10 +145,10 @@
                                                 </button>
                                             </span>
                                         </div>
-                                        <label>Qtd. Unidades:</label>
+                                        <label>Tamanho:</label>
                                         <div class="form-group input-group">
                                         	<span class="input-group-addon"><i class="fa fa-eur"></i></span>
-                                            <input type="text" class="form-control" name="quantidade_produto">
+                                            <input type="text" class="form-control" name="quantidaDeMililitros_produto" placeholder="Digite a quantidade em ml">
                                         </div>
                                     </form>
                                 </div>

@@ -23,7 +23,7 @@ public class JdbcProdutosDao {
 	}
 
 	public void adiciona(br.com.iesb.produto.modelo.Produto produto) {
-		String sql = "insert into produtos (nome_produto, marca_produto, genero_produto, valorDeCusto_produto, valorDeVenda_produto, categoria_produto, quantidade_produto, quantidaDeMililitros_produto, incluido) values (?,?,?,?,?,?,?,?,?)";
+		String sql = "insert into produtos (nome_produto, marca_produto, genero_produto, valorDeCusto_produto, valorDeVenda_produto, categoria_produto, quantidade_produto, quantidaDeMililitros_produto, incluido) values (?, ?,?,?,?,?,?,?,?)";
 		PreparedStatement stmt;
 		try {
 			stmt = connection.prepareStatement(sql);
@@ -59,21 +59,21 @@ public class JdbcProdutosDao {
 	}
 
 	public void altera(Produto produto) {
-		String sql = "update produtos set nome_produto = ?, marca_produto = ?, genero_produto = ? where id = ?";
+		String sql = "update produtos set nome_produto = ?, marca_produto = ?, genero_produto = ?, quantidaDeMililitros_produto = ? where id = ?";
 		PreparedStatement stmt;
 		try {
 			stmt = connection.prepareStatement(sql);
 			stmt.setString(1, produto.getNome_produto());
 			stmt.setString(2, produto.getMarca_produto());
 			stmt.setString(3, produto.getGenero_produto());
-			/*stmt.setDouble(4, produto.getValorDeCusto_produto());
-			stmt.setDouble(5, produto.getValorDeVenda_produto());
-			stmt.setString(6, produto.getCategoria_produto());
-			stmt.setInt(7, produto.getQuantidade_produto());
-			stmt.setDouble(8, produto.getQuantidaDeMililitros_produto());
-			stmt.setDate(9, produto.getDataInclusao_produto() != null ? new Date(
+			//stmt.setDouble(4, produto.getValorDeCusto_produto());
+		    //stmt.setDouble(5, produto.getValorDeVenda_produto());
+			//stmt.setString(6, produto.getCategoria_produto());
+			//stmt.setInt(4, produto.getQuantidade_produto());
+			stmt.setDouble(4, produto.getQuantidaDeMililitros_produto());
+			/*stmt.setDate(9, produto.getDataInclusao_produto() != null ? new Date(
 					produto.getDataInclusao_produto().getTimeInMillis()) : null);*/
-			stmt.setLong(4, produto.getId());
+			stmt.setLong(5, produto.getId());
 			stmt.execute();
 		} catch (SQLException e) {
 			throw new RuntimeException(e);

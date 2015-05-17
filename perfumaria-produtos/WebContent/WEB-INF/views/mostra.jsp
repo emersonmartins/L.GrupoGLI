@@ -34,7 +34,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="home">FlorensceSystem</a>
+                <a class="navbar-brand" href="home">FlorenceSystem</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -113,6 +113,10 @@
 									    		<label>Genero:</label>
 									    		<input class="form-control" type="text" name="genero_produto" value="" placeholder="${produto.genero_produto}" required="required">
 									    	</div>
+									    	<div class="form-group">	
+									    		<label>Tamanho:</label>
+									    		<input class="form-control" type="text" name="quantidaDeMililitros_produto" value="" placeholder="${produto.quantidaDeMililitros_produto}" required="required">
+									    	</div>
 									    	 <button type="submit" class="btn btn-default" value="Alterar">Alterar</button>
 									  </form>
                                 </div>
@@ -148,7 +152,10 @@
     		Genero:<br />
     		<input type="text" name="genero_produto" value="${produto.genero_produto}">
       			${produto.genero_produto}
-    		</ input><br />  
+    		</ input><br /> 
+    		<input type="text" name="quantidade_produto" value="${produto.quantidade_produto}">
+      			${produto.quantidade_produto}
+    		</ input><br /> 
     	<input type="submit" value="Alterar"/>
   </form>
 </body>
