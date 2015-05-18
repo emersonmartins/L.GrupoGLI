@@ -1,5 +1,6 @@
 package br.com.iesb.produto.controller;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
@@ -8,16 +9,24 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.iesb.produto.dao.JdbcProdutosDao;
+import br.com.iesb.produto.dao.JdbcUsuarioDao;
 import br.com.iesb.produto.modelo.Produto;
+import br.com.iesb.produto.modelo.Usuario;
 
 @Controller
 public class ProdutosController {
 	
-	@RequestMapping("novoProduto")
-	public String form(){
-		return "formulario";
-	}
+	@RequestMapping("florenceSystem")
+	public String efetuaLogin(Usuario usuario, HttpSession session){
+		
 	
+		if(new JdbcUsuarioDao().existeUsuario(usuario)) {
+			session.setAttribute("usuarioLogado", usuario);
+			return "home";
+		} 
+			return "redirect: login";
+		}
+		
 	@RequestMapping("adicionaProduto")
 	public String adiciona(@Valid Produto produto, BindingResult result){
 		
