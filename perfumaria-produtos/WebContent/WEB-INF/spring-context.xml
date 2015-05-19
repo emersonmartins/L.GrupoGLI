@@ -26,5 +26,11 @@
 		"org.springframework.context.support.ReloadableResourceBundleMessageSource">
 		<property name="basename" value="/WEB-INF/mensagens"/>
 	</bean>
+	
+	<mvc:interceptors>
+    	<bean 
+    	class=
+    	"br.com.iesb.produto.interceptor.AutorizadorInterceptor" />
+	</mvc:interceptors>
 
 </beans>
