@@ -12,7 +12,7 @@ public class AutorizadorInterceptor extends HandlerInterceptorAdapter {
 			HttpServletResponse response, Object Controller) throws Exception {
 		// TODO Auto-generated method stub
 		String uri = request.getRequestURI();
-	      if(uri.endsWith("login") ||
+	      if(uri.endsWith("loginForm") ||
 	          uri.endsWith("efetuaLogin") || 
 	                   uri.contains("resources")){
 	        return true;
@@ -23,7 +23,7 @@ public class AutorizadorInterceptor extends HandlerInterceptorAdapter {
 	        return true;
 	      }
 
-	      response.sendRedirect("login");
+	      response.sendRedirect("loginForm");
 	      return false;
 	  }
 	

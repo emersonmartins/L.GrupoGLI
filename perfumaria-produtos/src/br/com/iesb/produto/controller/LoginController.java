@@ -11,9 +11,9 @@ import br.com.iesb.produto.modelo.Usuario;
 @Controller
 public class LoginController {
 	
-	@RequestMapping("login")
+	@RequestMapping("loginForm")
 	public String loginForm() {
-		return "loginForm";
+		return "formulario-login";
 	}
 	
 	@RequestMapping("efetuaLogin")
@@ -22,6 +22,12 @@ public class LoginController {
 			session.setAttribute("usuarioLogado", usuario);
 			return "index";
 		}
-		return "redirect:login";
+		return "redirect:loginForm";
+	}
+	
+	@RequestMapping("logout")
+	public String logout(HttpSession session) {
+		session.invalidate();
+		return "redirect:loginForm";
 	}
 }

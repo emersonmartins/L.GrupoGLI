@@ -29,10 +29,10 @@
                         <form action="efetuaLogin" method="post">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="login" name="user" type="text" autofocus>
+                                    <input type="text" name="login" />
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Senha"   name="password" type="password" value="">
+                                    <input type="password" name="senha" />
                                 </div>
                                 <div class="checkbox">
                                     <label>
